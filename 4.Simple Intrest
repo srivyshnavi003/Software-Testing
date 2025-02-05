@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking user inputs
+        System.out.print("Enter Principal Amount: ");
+        double principal = scanner.nextDouble();
+        
+        System.out.print("Enter Time (in years): ");
+        double time = scanner.nextDouble();
+        
+        System.out.print("Enter Age of Customer: ");
+        int age = scanner.nextInt();
+        
+        // Determining rate of interest
+        double rateOfInterest = (age >= 60) ? 12 : 10;
+        
+        // Calculating simple interest
+        double simpleInterest = (principal * time * rateOfInterest) / 100;
+        
+        // Displaying result
+        System.out.println("Simple Interest: " + simpleInterest);
+        
+        scanner.close();
+    }
+}

@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class VotingSystem {
+    private static Scanner scanner = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+        
+        if (isEligible(age)) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+            System.out.println("You can vote after " + (18 - age) + " years.");
+        }
+    }
+    
+    private static boolean isEligible(int age) {
+        return age >= 18;
+    }
+}
